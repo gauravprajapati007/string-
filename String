@@ -1,0 +1,28 @@
+#include <iostream> 
+#include <string>
+#include<stack>
+using namespace std;
+class Solution {  
+public:
+    bool isValid (string s) { 
+        stack<char> a; 
+        if(s.length()%2!=0) 
+            return false; 
+        for(char c:s) {
+            if (c==' (' || c== ' [ ' || c== '{')
+               a.push(c);
+        else{ 
+        if(a.empty())
+            return false;
+        else if((a.top()=='(' && C==')') || (a.top()=='[' && C==']') || (c=='}' && a.top()=='{'))
+                 a.pop();
+        
+
+             else
+                 return false;
+        
+}
+}
+return a.empty();
+}
+};
